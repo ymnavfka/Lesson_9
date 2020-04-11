@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>параметры кредита</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>сумма кредита</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="loanAmount"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>срок кредита</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="loanPeriod"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="monthsOrYearsForLoanPeriod">
+            <item>
+             <property name="text">
+              <string>лет</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>мес.</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>процентная ставка</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="interestRate"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="monthsOrYearsForInterestRate">
+            <item>
+             <property name="text">
+              <string>%в год</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>%в мес</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>дополнительные параметры</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>единовременные комиссии</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <item>
+           <property name="text">
+            <string>% от суммы кредита</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>в валюте</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>ежемесячные комиссии</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_2"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <item>
+           <property name="text">
+            <string>% от суммы кредита</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>% от остатка долга</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>в валюте</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>вид платежа</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <item>
+           <property name="text">
+            <string>аннуитетный</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>дифференцированный</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Начало выплат</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_2">
+          <item>
+           <property name="text">
+            <string>январь</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>февраль</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>март</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>апрель</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>май</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>июнь</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>июль</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>август</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>сентябрь</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>октябрь</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ноябрь</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>декабрь</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_3">
+          <item>
+           <property name="text">
+            <string>2015</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2016</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2017</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2018</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2019</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2020</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2021</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2022</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2023</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2024</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2025</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2026</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2027</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2028</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2029</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2030</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2031</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2032</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2033</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2034</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="calcAmountMonthlyPayment">
+        <property name="text">
+         <string>рассчитать сумму ежемесячного платежа по кредиту</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="amountMonthlyPayment">
+      <property name="font">
+       <font>
+        <pointsize>72</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
