@@ -18,8 +18,6 @@ public:
 private slots:
     void on_calcAmountMonthlyPayment_clicked();
 
-    void on_comboBox_2_currentIndexChanged(int index);
-
 private:
     Ui::MainWindow *ui;
 };
