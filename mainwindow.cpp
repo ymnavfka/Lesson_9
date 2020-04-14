@@ -42,9 +42,46 @@ void MainWindow::on_calcAmountMonthlyPayment_clicked()
         interestRateMonthsOrYears = interestRate;
     }
 
-    ui->amountMonthlyPayment->setNum(loanAmount
-                                     * (interestRateMonthsOrYears
-                                        + interestRateMonthsOrYears
-                                        / (pow(1 + interestRateMonthsOrYears
-                                               , loanPeriodMonthsOrYears) - 1)));
+    double amountMonthlyPayment = loanAmount * (interestRateMonthsOrYears
+    + interestRateMonthsOrYears / (pow(1 + interestRateMonthsOrYears
+    , loanPeriodMonthsOrYears) - 1));
+    ui->amountMonthlyPayment->setNum(amountMonthlyPayment);
+
+
+    double overpaymentOfInterest = interestRateMonthsOrYears * amountMonthlyPayment - loanAmount;
+    ui->overpaymentOfInterest->setNum(overpaymentOfInterest);
+
+    i = ui->typeOfOneTimeCommission->currentIndex();
+    double oneTimeCommission{};
+    if (i == 0)
+    {
+    oneTimeCommission = ui->oneTimeCommission->text().toDouble() * loanAmount / 100;
+    }
+    else
+    {
+    oneTimeCommission = ui->oneTimeCommission->text().toDouble();
+    }
+
+    i = ui->typeOfMonthlyCommission->currentIndex();
+    double monthlyCommission{};
+    if(i == 0)
+    {
+    monthlyCommission = ui->monthlyCommission->text().toDouble() * loanAmount / 100;
+    }
+    else if (i == 1)
+    {
+    //monthlyCommission = ui->monthlyCommission->text().toDouble();
+    }
+    else
+    {
+    monthlyCommission = ui->monthlyCommission->text().toDouble();
+    }
+
+    double totalOverpaymentIncludingCommissions = overpaymentOfInterest + oneTimeCommission
+    + monthlyCommission * interestRateMonthsOrYears;
+    ui->totalOverpaymentIncludingCommissions->setNum(totalOverpaymentIncludingCommissions);
+
+    double effectiveInterestRate = ((1 + (interestRateMonthsOrYears / 100)
+    / loanPeriodMonthsOrYears) - 1) * 100;
+    ui->effectiveInterestRate->setNum(effectiveInterestRate);
 }
